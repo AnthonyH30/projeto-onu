@@ -14,12 +14,12 @@ export const Container = styled.section`
         cursor: pointer;
     }
 
-    .overlay-modal{
-        background-color: black;
+    .card img{
+        width: 100%;
     }
 
-    .modal{
-        color: red;
+    .modalContent{
+        background-color: red;
     }
 
     @media(max-width: 433px){

@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{ useContext } from 'react';
 import { Container } from './Styles';
 import logo from '../../assets/logo.svg';
 import dots from '../../assets/dots.svg';
 import { BiSearchAlt2 } from 'react-icons/bi'
+import { CardContext } from '../../context/Context';
 
 function Header() {
+
+    const { search, input, setInput } = useContext(CardContext);
+
   return (
     <Container>
         <div className="logo">
@@ -22,7 +26,7 @@ function Header() {
             <p className='city'>Magé, RJ</p>
         </div>
         <form className='search' onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder='Pesquise aqui' />
+            <input type="text" placeholder='Pesquise aqui' value={input} onChange={(e)=> setInput(e.target.value)} />
             <button className='btn'><BiSearchAlt2 /></button>
         </form>
     </Container>

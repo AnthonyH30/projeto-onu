@@ -1,0 +1,77 @@
+.modalOverlay{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent{
+    background-color: white;
+    width: 70%;
+    outline: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.number{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+}
+
+.banner{
+    width: 100%;
+    display: flex;
+    color: white;
+    min-height: 200px;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5%;
+    flex-direction: row-reverse;
+}
+
+.banner img{
+    height: 150px;
+}
+
+.content{
+    margin-left: 20px;
+}
+
+.content h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.content ul{
+    margin-left: 10px;
+    list-style: initial;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 768px){
+    .banner{
+        text-align: center;
+        flex-direction: column;
+        padding-block: 20px;
+    }
+}
+
+@media(max-width: 433px){
+    .modalContent{
+        width: 90%;
+    }
+}
