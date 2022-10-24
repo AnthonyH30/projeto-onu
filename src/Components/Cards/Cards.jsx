@@ -10,11 +10,14 @@ function Cards() {
 
   return (
     <Container>
-      {filteredCards.map(card => (
-        <div onClick={() => openModal(card)} className='card' key={card.id}>
-          <img src={card.image} alt={card.title} />
-        </div>
-      ))}
+      {filteredCards.length ?
+        filteredCards.map(card => (
+          <div onClick={() => openModal(card)} className='card' key={card.id}>
+            <img src={card.image} alt={card.title} />
+          </div>
+        )) : <p className='not-found'>Nenhum Objetivo encontrado</p>
+}
+      
       <Modal
       isOpen={modalIsOpen}
       onRequestClose={closeModal}

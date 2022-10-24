@@ -7,7 +7,7 @@ import { CardContext } from '../../context/Context';
 
 function Header() {
 
-    const { search, input, setInput } = useContext(CardContext);
+    const { input, setInput } = useContext(CardContext);
 
   return (
     <Container>
